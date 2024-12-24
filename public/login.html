@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/output.css" rel="stylesheet" />
+    <link href="assets/css/style.css" />
+    <title>Ecommerce | Sign In</title>
+    <script defer src="/__/firebase/11.1.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/11.1.0/firebase-auth-compat.js"></script>
+    <!-- <script defer src="/__/firebase/11.1.0/firebase-database-compat.js"></script> -->
+    <script defer src="/__/firebase/11.1.0/firebase-firestore-compat.js"></script>
+    <!-- <script defer src="/__/firebase/11.1.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/11.1.0/firebase-messaging-compat.js"></script> -->
+    <script defer src="/__/firebase/11.1.0/firebase-storage-compat.js"></script>
+    <!-- <script defer src="/__/firebase/11.1.0/firebase-analytics-compat.js"></script> -->
+    <!-- <script defer src="/__/firebase/11.1.0/firebase-remote-config-compat.js"></script> -->
+    <!-- <script defer src="/__/firebase/11.1.0/firebase-performance-compat.js"></script> -->
+
+</head>
+
+<body>
+    <div class="main flex justify-center items-center min-h-[100vh] bg-slate-300">
+        <div class="login-container bg-white p-8 rounded-xl shadow-xl max-w-[400px] w-full ">
+            <h1 class="text-center text-3xl font-bold">Sign In</h1>
+            <form class="mt-8" method="post" id="loginForm">
+                <div id="signInMessage" class="messageDiv bg-red-600 p-12 m-2 rounded-2xl text-2xl opacity-0"
+                    style="display: none;"></div>
+                <div class="mb-5">
+                    <input type="email" placeholder="Email"
+                        class="px-4 py-3 bg-gray-100 focus:bg-transparent text-gray-800 w-full text-sm rounded-md focus:outline-blue-600"
+                        id="email" required />
+                </div>
+
+                <div class="mb-5">
+                    <input type="password" placeholder="Enter Your Password"
+                        class="px-4 py-3 bg-gray-100 focus:bg-transparent text-gray-800 w-full text-sm rounded-md focus:outline-blue-600"
+                        id="password" required />
+                </div>
+
+                <div class="mb-5">
+                    <p>Don't Have An Account ? <a href="register.html" class="underline text-blue-400">Sign Up </a></p>
+                </div>
+                <button type="submit"
+                    class="rounded-md px-6 py-3 w-full text-sm tracking-wide bg-blue-600 hover:bg-blue-700 text-white">Login</button>
+            </form>
+        </div>
+    </div>
+    <!-- <script type="module" src="assets/js/admin/isUserLoggedIn.js"></script> -->
+
+    <script type="module" src="assets/js/admin/login.js"></script>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/assets/css/all.min.css" rel="stylesheet" />
+    <link href="/src/output.css" rel="stylesheet" />
+
+    <title>Ecommerce Dashboard</title>
+
+</head>
+
+<body>
+    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <div class="px-3 py-3 lg:px-5 lg:pl-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center justify-start rtl:justify-end">
+                    <button id="toggleSidebar" data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar"
+                        aria-controls="logo-sidebar" type="button"
+                        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                        <span class="sr-only">Open sidebar</span>
+                        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd" fill-rule="evenodd"
+                                d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+                            </path>
+                        </svg>
+                    </button>
+                    <a href="dashboard.html" class="flex ms-2 md:me-24">
+                        <img src="assets/images/logo/kushi.png" class="h-8 me-3" alt="kushi Logo" />
+
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <aside id="logo-sidebar"
+        class="fixed top-0 left-0 z-40 w-64 h-screen  transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+        aria-label="Sidebar">
+        <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
+            <ul class="space-y-2 font-medium  pt-16">
+                <li>
+                    <a href="dashboard.html"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+
+                        <span class="ms-3">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+
+                        <span class="ms-3">Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="viewproducts.html"
+                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+
+                        <span class="flex-1 ms-3 whitespace-nowrap">Products</span>
+                    </a>
+                </li>
+
+                <li>
+                    <button id="signout"
+                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                        role="menuitem">Sign out</button>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="p-4 sm:ml-64">
+        <form class="my-15 py-10" method="post" id="addproducts">
+
+
+            <div class="mt-8">
+                <div class="grid md:grid-cols-1 gap-4">
+                    <div>
+                        <input type="text" placeholder="Product Name" name="product_name" id="productName" required
+                            class="px-4 py-3 bg-gray-100 focus:bg-transparent text-gray-800 w-full text-sm rounded-md focus:outline-blue-600" />
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8">
+                <div class="grid md:grid-cols-1 gap-4">
+                    <div>
+                        <input type="number" placeholder="Product Price" name="product_price" id="productPrice" required
+                            class="px-4 py-3 bg-gray-100 focus:bg-transparent text-gray-800 w-full text-sm rounded-md focus:outline-blue-600" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <div class="grid md:grid-cols-1 gap-4">
+                    <div>
+                        <input type="text" placeholder="Image Url" name="product_image" id="productImage" required
+                            class="px-4 py-3 bg-gray-100 focus:bg-transparent text-gray-800 w-full text-sm rounded-md focus:outline-blue-600" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4">
+                <button type="submit"
+                    class="rounded-md px-6 py-3   text-sm tracking-wide bg-blue-600 hover:bg-blue-700 text-white">Add
+                    Product</button>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+<script src="assets/js/admin/responsiveAdmin.js"></script>
+
+<script type="module" src="assets/js/admin/isUserLoggedIn.js"></script>
+
+<script type="module" src="assets/js/admin/addProductAdmin.js"></script>
+
+</html>

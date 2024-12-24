@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+.messageDiv 
+{
+    opacity: 0;
+    animation: fadeOut 7s forwards;
+}
