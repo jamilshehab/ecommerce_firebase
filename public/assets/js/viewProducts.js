@@ -22,7 +22,6 @@ const db = getFirestore(app);
 const collectionProducts = collection(db, "products");
 
 let productRow = document.getElementById('productData');
-let cartRow = document.getElementById('cartData'); // Add a new element to display cart items
 
 // Function to add product to the cart
 
