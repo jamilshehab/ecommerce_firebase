@@ -38,7 +38,7 @@ async function fetchProducts() {
             // Create a div for each product with unique IDs or classes
             let productDiv = document.createElement('div');
             productDiv.id = `product-${doc.id}`;  // Assigning a unique ID to each product
-            productDiv.classList.add('product-card');  // Optional, to add a general class for styling
+            productDiv.classList.add('product-card');
 
             productDiv.innerHTML = `
                 <div class="h-56 w-full">

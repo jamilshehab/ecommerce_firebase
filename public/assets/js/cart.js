@@ -23,7 +23,6 @@ const analytics = getAnalytics(app);
 const db = getFirestore(app);
 
 const cartContainer = document.getElementById('cartId');
-const totalPriceElement = document.querySelector('.text-base.font-bold.text-gray-800 span'); // This is where the total will be displayed
 
 async function fetchCartItems() {
     try {
@@ -72,7 +71,7 @@ async function fetchCartItems() {
 
         // Create and display the total price outside the loop
         const totalPriceElement = document.createElement('div');
-        totalPriceElement.classList.add('total-price', 'text-right'); // Add a class for styling if needed
+        totalPriceElement.classList.add('total-price', 'text-right');
         totalPriceElement.innerHTML = `<span class="text-right text-xl font-bold py-4 ">Total: $${total.toFixed(2)}</span>`;
         cartContainer.appendChild(totalPriceElement);
 
@@ -96,7 +95,6 @@ async function fetchCartItems() {
                 const deletePromises = querySnapshot.docs.map(doc => deleteDoc(doc.ref));
                 await Promise.all(deletePromises);
 
-                // Optionally, clear the cart container in the UI
                 cartContainer.innerHTML = ''; // Clear the cart visually
                 alert('Your order has been placed successfully, and your cart has been cleared!');
             } catch (error) {

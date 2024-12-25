@@ -26,8 +26,6 @@ logoutButton.addEventListener("click", async () => {
     try {
         await signOut(authentication); // Sign out the user from Firebase Authentication
         alert("User logged out successfully!");
-
-        // Optionally, redirect to login or home page after logout
         window.location.href = "/login.html"; // Replace with your login page URL
     } catch (error) {
         console.error("Error during logout:", error.code, error.message);
